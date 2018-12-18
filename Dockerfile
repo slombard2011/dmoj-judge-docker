@@ -9,10 +9,10 @@ RUN pip install setuptools
 RUN pip install cython
 
 
-RUN wget https://swift.org/builds/swift-4.0.2-release/ubuntu1610/swift-4.0.2-RELEASE/swift-4.0.2-RELEASE-ubuntu16.10.tar.gz -o /dev/null -O - | tar xzf - -C /tmp
-RUN mv /tmp/swift* /opt/swift4
+#RUN wget https://swift.org/builds/swift-4.0.2-release/ubuntu1610/swift-4.0.2-RELEASE/swift-4.0.2-RELEASE-ubuntu16.10.tar.gz -o /dev/null -O - | tar xzf - -C /tmp
+#RUN mv /tmp/swift* /opt/swift4
 
-RUN chown nobody /opt/swift4/usr/lib/swift/CoreFoundation/module.modulemap
+#RUN chown nobody /opt/swift4/usr/lib/swift/CoreFoundation/module.modulemap
 
 RUN git clone https://github.com/Maitre-Hiboux/dmoj-judge-docker
 
