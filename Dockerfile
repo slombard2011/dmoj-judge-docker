@@ -16,9 +16,10 @@ RUN chown nobody /opt/swift4/usr/lib/swift/CoreFoundation/module.modulemap
 
 RUN git clone https://github.com/Xyene/dmoj-env
 
-WORKDIR /dmoj-env/judge-env
+WORKDIR /
 
-RUN /dmoj-env/judge-env/build-v8dmoj.sh
+RUN /dmoj-env/judge-env/build-v8dmoj-part1.sh
+RUN /dmoj-env/judge-env/build-v8dmoj-part2.sh
 
 WORKDIR /vagrant
 
