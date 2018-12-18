@@ -14,12 +14,12 @@ RUN mv /tmp/swift* /opt/swift4
 
 RUN chown nobody /opt/swift4/usr/lib/swift/CoreFoundation/module.modulemap
 
-RUN git clone https://github.com/Xyene/dmoj-env
+RUN git clone https://github.com/Maitre-Hiboux/dmoj-judge-docker
 
 WORKDIR /
 
-RUN /dmoj-env/judge-env/build-v8dmoj-part1.sh
-RUN /dmoj-env/judge-env/build-v8dmoj-part2.sh
+RUN /dmoj-judge-docker/build-v8dmoj-part1.sh
+RUN /dmoj-judge-docker/build-v8dmoj-part2.sh
 
 WORKDIR /vagrant
 
