@@ -17,13 +17,13 @@ RUN chown nobody /opt/swift4/usr/lib/swift/CoreFoundation/module.modulemap
 RUN git clone https://github.com/Maitre-Hiboux/dmoj-judge-docker
 
 WORKDIR /
-
-RUN /dmoj-judge-docker/build-v8dmoj-part1.sh
-RUN /dmoj-judge-docker/build-v8dmoj-part2.sh
+RUN chmod 755 /dmoj-judge-docker/*
+#RUN /dmoj-judge-docker/build-v8dmoj-part1.sh
+#RUN /dmoj-judge-docker/build-v8dmoj-part2.sh
 
 WORKDIR /vagrant
 
-RUN cp -r /vagrant/v8dmoj_bin /opt
+#RUN cp -r /vagrant/v8dmoj_bin /opt
 
 RUN git clone https://github.com/minkov/judge /vagrant/judge
 WORKDIR /vagrant/judge
@@ -32,7 +32,7 @@ RUN pip install -r requirements.txt
 
 RUN python setup.py develop
 
-RUN git clone https://github.com/cuklev/dsa-miniexam-tasks-dmoj.git /problems
+#RUN git clone https://github.com/cuklev/dsa-miniexam-tasks-dmoj.git /problems
+RUN cp /dmoj-judge-docker/systemd_files/* /etc/systemd/system/
 
-RUN cp /vagrant/systemd_files/* /etc/systemd/system/
-
+RUN /dmoj-judge-docker/start.sh

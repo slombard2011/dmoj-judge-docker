@@ -33,4 +33,5 @@ else
 	cd "$V8DMOJ"
 fi
 
-cp "$V8DMOJ/v8dmoj.cc" v8/samples/shell.cc
+cp "$V8DMOJ/v8dmoj.cc" v8/samples/
+mv v8/samples/v8dmoj.cc v8/samples/shell.cc
