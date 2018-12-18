@@ -1,0 +1,24 @@
+key: "1234567890"
+problem_storage_root:
+    - 2: /problems
+runtime:
+  clang: /usr/bin/clang
+  clang++: /usr/bin/clang++
+  fsharpc: /usr/bin/fsharpc
+  g++: /usr/bin/g++
+  g++11: /usr/bin/g++
+  g++14: /usr/bin/g++
+  gcc: /usr/bin/gcc
+  ghc: /usr/bin/ghc
+  java: /usr/bin/java
+  java8: /usr/bin/java
+  javac: /usr/bin/javac
+  javac8: /usr/bin/javac
+  mono: /usr/bin/mono
+  mono-csc: /usr/bin/mcs
+  perl: /usr/bin/perl
+  python: /usr/bin/python2.7
+  python3: /usr/bin/python3
+  ruby2: /usr/bin/ruby2.3
+  swiftc: /opt/swift4/usr/bin/swiftc
+  v8dmoj: /opt/v8dmoj_bin/v8dmoj
