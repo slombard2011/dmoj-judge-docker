@@ -33,5 +33,7 @@ RUN python setup.py develop
 
 #RUN git clone https://github.com/cuklev/dsa-miniexam-tasks-dmoj.git /problems
 RUN cp /dmoj-judge-docker/systemd_files/* /etc/systemd/system/
-
+RUN cp -R /dmoj-judge-docker/aplusb /problems/
 #RUN /dmoj-judge-docker/start.sh
+
+ENTRYPOINT ["/dmoj-judge-docker/docker-entrypoint.sh"]
