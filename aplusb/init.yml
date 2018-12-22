@@ -1,0 +1,2 @@
+test_cases:
+- {points: 5, in: aplusb.0.in, out: aplusb.0.out}

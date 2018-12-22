@@ -1,6 +1,7 @@
+id: "the_judge"
 key: "1234567890"
 problem_storage_root:
-    - 2: /problems
+    - /problems
 runtime:
   clang: /usr/bin/clang
   clang++: /usr/bin/clang++

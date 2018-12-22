@@ -1,7 +1,6 @@
-FROM ubuntu:xenial
+FROM debian:stretch
 RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y sudo wget apt git python-dev python-pip build-essential mono-complete openjdk-8-jdk ruby php ghc clang libicu-dev #nano debconf-utils mysql-client libmysqlclient-dev gnupg wget git gcc g++ make python-dev libxml2-dev libxslt1-dev zlib1g-dev gettext curl wget openssl ruby ruby-dev gem 
+RUN apt-get install -y sudo wget apt git python-dev python-pip build-essential mono-complete openjdk-8-jdk ruby php ghc clang libicu-dev nano #nano debconf-utils mysql-client libmysqlclient-dev gnupg wget git gcc g++ make python-dev libxml2-dev libxslt1-dev zlib1g-dev gettext curl wget openssl ruby ruby-dev gem 
 
 RUN pip install --upgrade pip
 
@@ -35,4 +34,4 @@ RUN python setup.py develop
 #RUN git clone https://github.com/cuklev/dsa-miniexam-tasks-dmoj.git /problems
 RUN cp /dmoj-judge-docker/systemd_files/* /etc/systemd/system/
 
-RUN /dmoj-judge-docker/start.sh
+#RUN /dmoj-judge-docker/start.sh
