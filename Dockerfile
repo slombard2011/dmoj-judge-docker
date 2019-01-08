@@ -36,7 +36,7 @@ RUN pip install -r requirements.txt
 RUN python setup.py develop
 
 RUN cp /dmoj-judge-docker/systemd_files/* /etc/systemd/system/
-RUN mkdir /problems/aplusb
-RUN cp -R /dmoj-judge-docker/aplusb /problems/aplusb/
+RUN mkdir -p /problems/aplusb
+RUN cp /dmoj-judge-docker/aplusb/* /problems/aplusb/
 
 #ENTRYPOINT ["/dmoj-judge-docker/docker-entrypoint.sh"]
