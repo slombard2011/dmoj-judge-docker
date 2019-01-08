@@ -16,16 +16,17 @@ RUN pip install cython
 RUN git clone https://github.com/Maitre-Hiboux/dmoj-judge-docker
 
 WORKDIR /
+RUN mkdir /dmoj
 RUN chmod 755 /dmoj-judge-docker/*
 #RUN /dmoj-judge-docker/build-v8dmoj-part1.sh
 #RUN /dmoj-judge-docker/build-v8dmoj-part2.sh
 
-WORKDIR /vagrant
+WORKDIR /dmoj
 
-#RUN cp -r /vagrant/v8dmoj_bin /opt
+#RUN cp -r /dmoj/v8dmoj_bin /opt
 
-RUN git clone https://github.com/minkov/judge /vagrant/judge
-WORKDIR /vagrant/judge
+RUN git clone https://github.com/minkov/judge /dmoj/judge
+WORKDIR /dmoj/judge
 
 RUN pip install -r requirements.txt
 

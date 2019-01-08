@@ -17,7 +17,7 @@ mv /tmp/swift* /opt/swift4
 
 chown nobody /opt/swift4/usr/lib/swift/CoreFoundation/module.modulemap
 
-cd /vagrant
+cd /dmoj
 if [[ -d v8dmoj_bin ]]; then
 	echo "v8dmoj found :)"
 	cp -r v8dmoj_bin /opt
@@ -25,8 +25,8 @@ else
 	echo "v8dmoj not found! You must build it first."
 fi
 
-git clone https://github.com/minkov/judge /vagrant/judge
-cd /vagrant/judge
+git clone https://github.com/minkov/judge /dmoj/judge
+cd /dmoj/judge
 
 pip install -r requirements.txt
 
@@ -34,7 +34,7 @@ python setup.py develop
 
 git clone https://github.com/cuklev/dsa-miniexam-tasks-dmoj.git /problems
 
-cp /vagrant/systemd_files/* /etc/systemd/system/
+cp /dmoj/systemd_files/* /etc/systemd/system/
 
 for cmd in enable start; do
     for unit in dmoj-judge@Local.service dmoj-sync-problems.timer; do
