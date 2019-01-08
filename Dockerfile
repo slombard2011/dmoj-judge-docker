@@ -12,8 +12,11 @@ RUN pip install cython
 #RUN mv /tmp/swift* /opt/swift4
 
 #RUN chown nobody /opt/swift4/usr/lib/swift/CoreFoundation/module.modulemap
-
-RUN git clone https://github.com/Maitre-Hiboux/dmoj-judge-docker
+RUN mkdir -p /dmoj-judge-docker/aplusb
+RUN mkdir /dmoj-judge-docker/systemd_files
+COPY * /dmoj-judge-docker/
+COPY aplusb/* /dmoj-judge-docker/aplusb/
+COPY systemd_files/* /dmoj-judge-docker/systemd_files/
 
 WORKDIR /
 RUN mkdir /dmoj
