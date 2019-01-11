@@ -39,4 +39,5 @@ RUN cp /dmoj-judge-docker/systemd_files/* /etc/systemd/system/
 RUN mkdir -p /problems/aplusb
 RUN cp /dmoj-judge-docker/aplusb/* /problems/aplusb/
 
-#ENTRYPOINT ["/dmoj-judge-docker/docker-entrypoint.sh"]
+ENTRYPOINT ["/dmoj-judge-docker/docker-entrypoint.sh"]
+CMD []
