@@ -3,23 +3,40 @@ key: "1234567890"
 problem_storage_root:
     - /problems
 runtime:
-  clang: /usr/bin/clang
-  clang++: /usr/bin/clang++
-  fsharpc: /usr/bin/fsharpc
+  as_x64: /usr/bin/x86_64-linux-gnu-as
+  as_x86: /usr/bin/as
+  awk: /usr/bin/mawk
+  cat: /bin/cat
+  clang: /usr/bin/clang-3.8
+  clang++: /usr/bin/clang++-3.8
   g++: /usr/bin/g++
   g++11: /usr/bin/g++
   g++14: /usr/bin/g++
+  g++17: /usr/bin/g++
   gcc: /usr/bin/gcc
+  gcc11: /usr/bin/gcc
   ghc: /usr/bin/ghc
-  java: /usr/bin/java
-  java8: /usr/bin/java
-  javac: /usr/bin/javac
-  javac8: /usr/bin/javac
+  java8: /usr/lib/jvm/java-8-openjdk-amd64/bin/java
+  javac8: /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
+  ld_x64: /usr/bin/x86_64-linux-gnu-ld
+  ld_x86: /usr/bin/ld
   mono: /usr/bin/mono
-  mono-csc: /usr/bin/mcs
+  mono-csc: /usr/bin/mono-csc
   perl: /usr/bin/perl
+  php: /usr/bin/php
   python: /usr/bin/python2.7
-  python3: /usr/bin/python3
+  python3: /usr/bin/python3.5
   ruby2: /usr/bin/ruby2.3
-  swiftc: /opt/swift4/usr/bin/swiftc
-  v8dmoj: /opt/v8dmoj_bin/v8dmoj
+  scala_args:
+  - -Xbootclasspath/a:/usr/share/scala-2.11/lib/hawtjni-runtime.jar:/usr/share/scala-2.11/lib/jansi.jar:/usr/share/scala-2.11/lib/jline.jar:/usr/share/scala-2.11/lib/scala-actors.jar:/usr/share/scala-2.11/lib/scala-compiler.jar:/usr/share/scala-2.11/lib/scala-library.jar:/usr/share/scala-2.11/lib/scala-parser-combinators.jar:/usr/share/scala-2.11/lib/scala-reflect.jar:/usr/share/scala-2.11/lib/scala-xml.jar:/usr/share/scala-2.11/lib/scalap.jar
+  - -classpath
+  - '''""'''
+  - -Dscala.home=/usr/share/scala-2.11
+  - -Dscala.usejavacp=true
+  - -Denv.emacs=
+  - scala.tools.nsc.MainGenericRunner
+  scala_vm: /usr/bin/java
+  scalac: /usr/bin/scalac
+  sed: /bin/sed
+  tclsh: /usr/bin/tclsh
+  v8dmoj: /usr/bin/v8dmoj
