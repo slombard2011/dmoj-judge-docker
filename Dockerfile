@@ -44,4 +44,4 @@ RUN mkdir -p /problems/aplusb
 RUN cp /dmoj-judge-docker/aplusb/* /problems/aplusb/
 
 ENTRYPOINT ["/dmoj-judge-docker/docker-entrypoint.sh"]
-CMD []
+CMD ["","the_judge","0123456789"]
