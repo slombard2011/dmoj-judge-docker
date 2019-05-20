@@ -1,7 +1,7 @@
 FROM debian:stretch
 RUN apt-get update
 RUN apt-get install -y apt-transport-https
-RUN apt-get install -y sudo wget curl apt git libseccomp-dev python-dev python-pip python3 build-essential mono-complete openjdk-8-jdk ruby php ghc clang libicu-dev nano ninja-build debconf-utils gnupg gcc g++ make libxml2-dev libxslt1-dev zlib1g-dev gettext openssl ruby ruby-dev gem scala
+RUN apt-get install -y sudo wget curl apt net-tools git libseccomp-dev python-dev python-pip python3 build-essential mono-complete openjdk-8-jdk ruby php ghc clang libicu-dev nano ninja-build debconf-utils gnupg gcc g++ make libxml2-dev libxslt1-dev zlib1g-dev gettext openssl ruby ruby-dev gem scala
 
 RUN pip install --upgrade pip
 
